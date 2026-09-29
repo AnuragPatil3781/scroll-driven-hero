@@ -1,22 +1,36 @@
-# Pixel Perfect Preview
+# Scroll-Driven Hero Section Animation
 
-Implement exactly the screenshot and nothing else
+A cinematic, scroll-driven hero section featuring a futuristic vehicle whose
+movement, scale, rotation, and visual effects respond directly to scroll
+progress.
 
-**Live app**: https://scroll-driven-hero.lovable.app
+## Features
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ab7038d0-30a1-41b1-8eed-211b1e0930bf).
+- Scroll-controlled vehicle animation
+- GSAP ScrollTrigger animations
+- Staggered hero headline reveal
+- Animated performance statistics
+- Parallax grid and light trails
+- Responsive design
+- Smooth scroll-linked transitions
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Tech Stack
 
-## Development
+- React
+- TypeScript
+- GSAP
+- GSAP ScrollTrigger
+- Tailwind CSS
+- TanStack Start
+- Vite
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Live Demo
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+https://scroll-driven-hero.lovable.app
+
+## Run Locally
+
+```bash
+npm install
 npm run dev
-```
+npm run build
