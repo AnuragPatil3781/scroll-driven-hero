@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Scroll-experience UI lives in JSX components under `src/components/` (Hero, Stats, Vehicle, ScrollVisual); all scroll animation runs in one GSAP ScrollTrigger timeline inside `ScrollVisual.jsx` so motion stays in a single source of truth.
