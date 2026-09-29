@@ -2,11 +2,7 @@
 
 Implement exactly the screenshot and nothing else
 
-This project was built with [Lovable](https://lovable.dev).
-
 **Live app**: https://scroll-driven-hero.lovable.app
-
-## Build with Lovable
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ab7038d0-30a1-41b1-8eed-211b1e0930bf).
 
