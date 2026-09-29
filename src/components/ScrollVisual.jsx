@@ -90,8 +90,8 @@ export default function ScrollVisual() {
           tl.to(vehicle, { xPercent: 20 * k, yPercent: 0, scale: s(1.0), rotation: 3, duration: 20 }, 0)
             .to(vehicle, { xPercent: 55 * k, yPercent: -5, scale: s(1.1), rotation: 5, duration: 15 }, 20)
             // cinematic crossing 35–65%: wider sweep, a touch more lean and scale
-            .to(vehicle, { xPercent: 60 * k, yPercent: -7, scale: s(1.14), rotation: 7, duration: 5, ease: "sine.out" }, 35)
-            .to(vehicle, { xPercent: -54 * k, yPercent: -13, scale: s(1.24), rotation: -7, duration: 20, ease: "sine.inOut" }, 40)
+            .to(vehicle, { xPercent: 56 * k, yPercent: -7, scale: s(1.14), rotation: 7, duration: 5, ease: "sine.out" }, 35)
+            .to(vehicle, { xPercent: -48 * k, yPercent: -13, scale: s(1.24), rotation: -7, duration: 20, ease: "sine.inOut" }, 40)
             .to(vehicle, { xPercent: -15 * k, yPercent: -20, scale: s(1.3), rotation: -2, duration: 20, ease: "sine.out" }, 60)
             .to(vehicle, { xPercent: 25 * k, yPercent: -25, scale: s(1.4), rotation: 0, duration: 16 }, 80)
             .to(vehicle, { opacity: 0.72, yPercent: -28, duration: 4 }, 96);
