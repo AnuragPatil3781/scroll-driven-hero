@@ -88,14 +88,17 @@ export default function ScrollVisual() {
           /* --- vehicle journey: six stages --- */
           gsap.set(vehicle, { xPercent: 0, yPercent: 5, scale: s(0.85), rotation: 0 });
           tl.to(vehicle, { xPercent: 20 * k, yPercent: 0, scale: s(1.0), rotation: 3, duration: 20 }, 0)
-            .to(vehicle, { xPercent: 55 * k, yPercent: -5, scale: s(1.1), rotation: 5, duration: 20 }, 20)
-            .to(vehicle, { xPercent: -45 * k, yPercent: -12, scale: s(1.2), rotation: -5, duration: 20 }, 40)
-            .to(vehicle, { xPercent: -15 * k, yPercent: -20, scale: s(1.3), rotation: -2, duration: 20 }, 60)
-            .to(vehicle, { xPercent: 25 * k, yPercent: -25, scale: s(1.4), rotation: 0, duration: 20 }, 80);
+            .to(vehicle, { xPercent: 55 * k, yPercent: -5, scale: s(1.1), rotation: 5, duration: 15 }, 20)
+            // cinematic crossing 35–65%: wider sweep, a touch more lean and scale
+            .to(vehicle, { xPercent: 56 * k, yPercent: -7, scale: s(1.14), rotation: 7, duration: 5, ease: "sine.out" }, 35)
+            .to(vehicle, { xPercent: -48 * k, yPercent: -13, scale: s(1.24), rotation: -7, duration: 20, ease: "sine.inOut" }, 40)
+            .to(vehicle, { xPercent: -15 * k, yPercent: -20, scale: s(1.3), rotation: -2, duration: 20, ease: "sine.out" }, 60)
+            .to(vehicle, { xPercent: 25 * k, yPercent: -25, scale: s(1.4), rotation: 0, duration: 16 }, 80)
+            .to(vehicle, { opacity: 0.72, yPercent: -28, duration: 4 }, 96);
 
-          /* --- headline: prominent, lifts away, then fades --- */
-          tl.to(heroCopy, { y: -90, scale: 0.9, duration: 25 }, 20)
-            .to(heroCopy, { opacity: 0, y: -150, duration: 20 }, 45);
+          /* --- headline: holds to 25%, lifts subtly, then gradual fade --- */
+          tl.to(heroCopy, { y: -60, scale: 0.93, duration: 20 }, 25)
+            .to(heroCopy, { opacity: 0, y: -140, duration: 15, ease: "power1.in" }, 45);
 
           /* --- statistics: hold, drift down, gone by 50% --- */
           tl.to(stats, { y: 60, opacity: 0.45, duration: 20 }, 25)
@@ -105,7 +108,8 @@ export default function ScrollVisual() {
           tl.to(grid, { x: -150, y: 40, duration: 50 }, 0)
             .to(grid, { x: 100, y: 80, duration: 50 }, 50);
           tl.to(glow, { x: 220, y: -60, scale: 1.15, duration: 40 }, 0)
-            .to(glow, { x: -180, y: 40, scale: 1.3, duration: 60 }, 40);
+            .to(glow, { x: -180, y: 40, scale: 1.3, duration: 50 }, 40)
+            .to(glow, { scale: 1.42, opacity: 1.0, filter: "brightness(1.25)", duration: 10 }, 90);
           tl.to(particles, { y: -120, x: -60, opacity: 0.85, duration: 100 }, 0);
 
           /* --- motion trails: hidden, fade in, sweep, fade out --- */
@@ -122,9 +126,9 @@ export default function ScrollVisual() {
           /* --- scroll indicator fades out early --- */
           tl.to(indicator, { opacity: 0, y: 16, duration: 12 }, 0);
 
-          /* --- outro line, only at the very end --- */
-          gsap.set(outro, { opacity: 0, y: 24 });
-          tl.to(outro, { opacity: 1, y: 0, duration: 4 }, 96);
+          /* --- outro: soft rise over the final stretch --- */
+          gsap.set(outro, { opacity: 0, y: 32 });
+          tl.to(outro, { opacity: 1, y: 0, duration: 8, ease: "power2.out" }, 92);
 
           return () => tl.kill();
         },
